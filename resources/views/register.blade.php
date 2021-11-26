@@ -8,10 +8,6 @@
 @section('content')
 <form action="{{ route('reg-form') }}" method="post">
 @csrf
-    <div class="form-name">
-        Signup Form
-    </div>
-
     <div class="form-field">
         <label class="field__label">
             <span for="" class="label-name">Username:</span><br>
@@ -36,15 +32,7 @@
             @enderror
         </label>
     </div>
-    <div class="form-field">
-        <label class="field__label">
-            <span for="" class="label-name">Confirm password:</span><br>
-            <input type="password" name="password_confirmation" class="field__input" value="{{ old('password_confirmation') }}">
-            @error("password_confirmation")
-            <div class="error-msg" style="color: red;">{{ $message }}</div>
-            @enderror
-        </label>
-    </div>
+    
     <div class="form-field btn-field">
         <button class="btn-submit">Sign up</button>
     </div>
@@ -52,6 +40,6 @@
     <!-- <div class="form-field invitation-msg">
         Already have an account?
         <a href="{{ route('log-in') }}">Log in</a>
-    </div> -->
+    </div>
 </form>
 @endsection
