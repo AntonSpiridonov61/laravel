@@ -8,7 +8,9 @@
  </head>
  <body>
     @include('inc.header')
-    @yield('content')
 
+    @include('inc.messages')
+
+    @yield('content')
  </body>
  </html>
