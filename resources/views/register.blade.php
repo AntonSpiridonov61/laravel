@@ -12,6 +12,9 @@
         <label class="field__label">
             <span for="" class="label-name">Username:</span><br>
             <input type="text" name="name" class="field__input" placeholder="Введите имя" value="{{ old('name') }}">
+            @error("name")
+            <div class="error-msg" style="color: red;">{{ $message }}</div>
+            @enderror
         </label>
     </div>
     <div class="form-field">
